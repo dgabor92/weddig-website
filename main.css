@@ -67,13 +67,7 @@ h2 {
   font-family: cursive;
   margin: 1.2rem auto;
 }
-/*@media screen and (min-width: 1224px) {
-    section {
-        width: 50%;
-        max-width: 600px;
-        margin: 2rem auto;
-      }
-}*/
+
 .ceremony img {
   height: 7.5rem;
   margin-bottom: 1.5rem;
