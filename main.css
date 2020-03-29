@@ -1,84 +1,332 @@
+/* =============================
+
+    GENERAL STYLES
+
+=============================*/
+
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
-/*headline css*/
-.cover {
-  background: url("https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg")
-    no-repeat 70% center/cover;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  color: rgb(19, 106, 204);
-  font-family: cursive;
-  text-align: center;
-  display: table;
-  margin: 0 auto;
+
+/* Single-direction margin declaration to establish vertical rhythm. */
+h1,
+h2,
+h3,
+ul,
+ol,
+p,
+img {
+  margin-bottom: 1.5rem;
 }
-.wrapper {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 0 0.625rem;
-  content: "";
-}
-.tagline {
-  font-size: 1.4rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.1rem;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-}
-.headline {
-  font-size: 3rem;
-  margin: 2rem 0;
-}
-.date {
-  font-size: 1.4rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.1rem;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-}
-.date::after {
-  content: "";
-  display: block;
-  height: 0.18rem;
-  width: 5vw;
-  margin: 1.5rem auto;
-  background-color: rgb(19, 106, 204);
-}
-.section {
+
+body {
   background: url("https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-background.png")
-    no-repeat 70% center/cover;
-  background-size: cover;
+    repeat center;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: #444349;
 }
-h2 {
-  font-family: cursive;
+
+.locations,
+.program,
+.gifts,
+.faq,
+.contact {
+  width: 95%;
+  margin: 1.5rem auto;
+  padding: 0.5rem 1rem;
   text-align: center;
-  display: table;
-  margin: 0 auto;
-  letter-spacing: 0.2rem;
-  padding: 1.5rem;
+}
+
+h1,
+h2 {
+  font-family: "Great Vibes", cursive;
+}
+
+h2 {
   font-size: 3rem;
 }
-/* LOCATIONS style css*/
-.ceremony div {
-  font-family: cursive;
-  margin: 1.2rem auto;
-}
- 
-.ceremony img {
-  height: 7.5rem;
-  margin-bottom: 1.5rem;
-  padding: 0.5rem 1rem;
-}
-.ceremony h3 {
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+
+h3 {
   font-size: 1.5rem;
 }
 
+a {
+  text-decoration: none;
+  color: #bd806e;
+}
+
+a:hover {
+  color: #eda087;
+  transition: color 0.15s ease-in-out;
+}
+/* =============================
+
+    HEADER STYLES
+
+=============================*/
+
+.cover {
+  background: url("https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg")
+    no-repeat 70% center/cover;
+  display: table;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  color: #fff;
+}
+
+.hero-text-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.hero-text {
+  margin: 0 auto;
+  padding: 0.625rem;
+  color: hsla(0, 0%, 100%, 0.9);
+  background: hsla(100, 0%, 0%, 0.5);
+}
+
+.hero-text h1 {
+  font-size: 3.15rem;
+  color: #d2ba87;
+  margin-bottom: 0; /* To negate the effect of the single-direction margin declaration. */
+}
+
+.tagline {
+  font-size: 1.25rem;
+  letter-spacing: 0.15rem;
+  color: #fff;
+}
+
+.tagline::after {
+  display: block;
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  width: 12.515625rem;
+  margin: 0.5rem auto;
+}
+
+.date {
+  font-size: 1.25rem;
+  letter-spacing: 0.15rem;
+  vertical-align: middle;
+  color: #fff;
+}
+
+.date::before,
+.date::after {
+  display: inline-block;
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  width: 1.5rem;
+  vertical-align: middle;
+  margin: 0 0.5rem;
+}
+.headline {
+  text-transform: uppercase;
+  line-height: 2rem;
+  font-weight: 800;
+  font-size: 2rem;
+  padding: 1;
+  margin: 10px 10px 10px 0;
+}
+@media (min-width: 768px) {
+  .cover {
+    background: url("https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg")
+      no-repeat center/cover;
+  }
+}
+
+/*=============
+
+  MEDIA for Header section
+
+  ===============*/
+
+@media (min-width: 768px) {
+  .hero-text {
+    padding: 1.25rem;
+    border-radius: 4px;
+    width: 50%;
+  }
+
+  .hero-text h1 {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .tagline {
+    text-transform: uppercase;
+  }
+}
+/* =============================
+
+      LOCATIONS STYLES
+
+=============================*/
+
+.blurb img {
+  height: 7.5rem;
+}
+
+.blurb h3 {
+  font-weight: 700;
+}
+
+.blurb div {
+  font-family: "Muli", sans-serif;
+}
+
+.blurb::after {
+  content: "";
+  display: block;
+  height: 0.1875rem;
+  width: 25vw;
+  margin: 1.5rem auto;
+  background-color: #444349;
+}
+
+/* ================
+
+Media for Location
+
+==========*/
+
+@media (min-width: 768px) {
+  .blurb {
+    display: inline-block;
+    width: 30%;
+    padding: 1.5rem;
+    margin: 0.5rem;
+  }
+
+  .blurb::after {
+    display: none;
+  }
+}
+/* =============================
+
+        PROGRAM STYLES
+
+=============================*/
+
+.program {
+  width: 100vw;
+  text-align: left;
+  background: hsla(100, 0%, 0%, 0.6);
+  color: #d2ba87;
+  font-family: "Muli", sans-serif;
+}
+
+.program h2 {
+  font-family: "Great Vibes", cursive;
+  margin-top: 1rem; /* To account for the unequal margins compared to the previous section. */
+  text-align: center;
+}
+
+.program p {
+  font-style: italic;
+}
+
+.program ul {
+  letter-spacing: 0.025rem;
+}
+/*===============
+
+Media for programs
+
+==========*/
+
+@media (min-width: 768px) {
+  .program-wrapper {
+    width: 30vw;
+    margin: 0 auto;
+  }
+}
+/* =============================
+
+        GIFTS STYLES
+
+=============================*/
+
+.gifts img {
+  height: 7.5rem;
+}
+
+.gifts p:last-child {
+  /* To even out the bottom and top margins of this section. */
+  margin-bottom: 0;
+}
+
+/* ================
+
+Media for questions and answers
+
+=============*/
+
+@media (min-width: 768px) {
+  .question-group {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    padding: 1.5rem;
+    margin: 0.5rem;
+  }
+
+  .question-group::after {
+    display: none;
+  }
+
+  .question-group h3 {
+    text-align: left;
+  }
+}
+
+/* =============================
+
+        FAQ STYLES
+
+=============================*/
+
+.faq {
+  background: hsla(100, 0%, 0%, 0.6);
+  color: #d2ba87;
+  width: 100vw;
+  text-align: center;
+}
+
+.faq h2 {
+  margin-top: 1rem; /* To even out top and bottom margins. */
+}
+
+.faq p {
+  font-family: "Muli", sans-serif;
+  text-align: left;
+}
+
+.question-group::after {
+  content: "";
+  display: block;
+  height: 0.1875rem;
+  width: 50vw;
+  margin: 1.5rem auto;
+  background-color: #d2ba87;
+}
+
+.question {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.answer {
+  margin-bottom: 1.5rem;
+}
 /*Footer css*/
 footer {
   background-color: #606060;
